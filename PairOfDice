@@ -1,0 +1,37 @@
+/*
+ 
+ */
+package pairofdice;
+
+/**
+ *
+ * @author ketcha
+ */
+
+public class RollPairOfDice {
+    public static void main(String[] args){
+        PairOfDice dicePair;
+        dicePair = new PairOfDice();
+        
+        int countRolls;
+        
+        int total;
+        
+        countRolls = 0;
+        
+        do{
+            dicePair.roll();
+            total = dicePair.die1 + dicePair.die2;
+            
+            countRolls ++;
+            
+            System.out.println();
+            
+            
+        }while (total != 2);
+        
+        System.out.println("It took " + countRolls + " rolls to reach the snake eyes");
+        
+    }
+    
+}
